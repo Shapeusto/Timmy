@@ -1,0 +1,109 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "Digitalreach",
+      "lastOpened": true,
+      "tasks": [
+        {
+          "id": 1,
+          "name": "Erecruiter",
+          "timeSeconds": 720,
+          "displayOrder": 1,
+          "subtasks": [
+            {
+              "id": 1,
+              "name": "Speed optimization",
+              "timeSeconds": 120,
+              "displayOrder": 1
+            },
+            {
+              "id": 2,
+              "name": "Font fix",
+              "timeSeconds": 480,
+              "displayOrder": 2
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "TSHN",
+          "timeSeconds": 21600,
+          "displayOrder": 2,
+          "subtasks": []
+        },
+        {
+          "id": 3,
+          "name": "Shapeusto",
+          "timeSeconds": 86400,
+          "displayOrder": 3,
+          "subtasks": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Karim",
+      "lastOpened": false,
+      "tasks": [
+        {
+          "id": 4,
+          "name": "Website Redesign",
+          "timeSeconds": 14400,
+          "displayOrder": 1,
+          "subtasks": [
+            {
+              "id": 3,
+              "name": "Homepage",
+              "timeSeconds": 7200,
+              "displayOrder": 1
+            },
+            {
+              "id": 4,
+              "name": "Contact Page",
+              "timeSeconds": 3600,
+              "displayOrder": 2
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "SEO Optimization",
+          "timeSeconds": 5400,
+          "displayOrder": 2,
+          "subtasks": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Martin",
+      "lastOpened": false,
+      "tasks": [
+        {
+          "id": 6,
+          "name": "Mobile App",
+          "timeSeconds": 28800,
+          "displayOrder": 1,
+          "subtasks": [
+            {
+              "id": 5,
+              "name": "Login Screen",
+              "timeSeconds": 10800,
+              "displayOrder": 1
+            },
+            {
+              "id": 6,
+              "name": "Dashboard",
+              "timeSeconds": 14400,
+              "displayOrder": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "nextClientId": 4,
+  "nextTaskId": 7,
+  "nextSubtaskId": 7
+}

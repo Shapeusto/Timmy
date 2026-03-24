@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report - Timmy</title>
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <div id="settings-container">
+        <!-- Date Filter -->
+        <div id="date-filter-bar">
+            <div class="date-filter-label">From</div>
+            <input type="date" id="date-from" class="date-input" value="2025-11-01">
+            <div class="date-filter-label">To</div>
+            <input type="date" id="date-to" class="date-input" value="2025-11-07">
+            <button id="clear-filter-btn" class="filter-btn">Clear</button>
+            <button id="close-settings-btn" class="close-btn">
+                <img src="images/Close.svg" alt="Close">
+            </button>
+        </div>
+        
+        <!-- Ľavý panel - zoznam klientov -->
+        <div id="clients-panel">
+            <div class="settings-header">
+                <div class="header-section">
+                    <h1>CLIENTS</h1>
+                </div>
+                <div class="header-divider"></div>
+                <div class="header-section time-header">
+                    <h1>TIME TOTAL</h1>
+                </div>
+                <div class="header-divider"></div>
+                <div class="header-section download-header">
+                    <h1>DOWNLOAD</h1>
+                </div>
+            </div>
+            <div id="clients-list">
+                <!-- Client 1 -->
+                <div class="client-row">
+                    <div class="client-row-name">Erecrutter</div>
+                    <div class="client-row-divider"></div>
+                    <div class="client-row-time">6h</div>
+                    <div class="client-row-divider"></div>
+                    <button class="download-btn">
+                        <img src="images/Down.svg" alt="Download">
+                    </button>
+                </div>
+
+                <!-- Client 2 -->
+                <div class="client-row">
+                    <div class="client-row-name">TSHN</div>
+                    <div class="client-row-divider"></div>
+                    <div class="client-row-time">5h</div>
+                    <div class="client-row-divider"></div>
+                    <button class="download-btn">
+                        <img src="images/Down.svg" alt="Download">
+                    </button>
+                </div>
+
+                <!-- Client 3 -->
+                <div class="client-row">
+                    <div class="client-row-name">Shapeusto</div>
+                    <div class="client-row-divider"></div>
+                    <div class="client-row-time">7d</div>
+                    <div class="client-row-divider"></div>
+                    <button class="download-btn">
+                        <img src="images/Down.svg" alt="Download">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="panel-divider"></div>
+
+        <!-- Pravý panel - detail panel -->
+        <div id="detail-panel">
+            <div class="settings-header">
+                <div class="header-section tasks-header">
+                    <h1 id="client-title">DIGITALREACH</h1>
+                </div>
+                <div class="header-divider"></div>
+                <div class="header-section wireframing-header">
+                    <h1 id="task-title">WIREFRAMING</h1>
+                </div>
+            </div>
+            <div id="tasks-detail">
+                <div class="detail-content">
+                    <!-- DIGITALREACH column -->
+                    <div class="digitalreach-column" id="digitalreach-list">
+                        <div class="task-row">
+                            <div class="task-name">Wireframing</div>
+                            <div class="task-time">5h</div>
+                        </div>
+                        <div class="task-row">
+                            <div class="task-name">Design</div>
+                            <div class="task-time">2h</div>
+                        </div>
+                        <div class="task-row">
+                            <div class="task-name">Architecture</div>
+                            <div class="task-time">5h</div>
+                        </div>
+                        <div class="subtask-row">
+                            <div class="subtask-name">Research</div>
+                            <div class="subtask-time">2h</div>
+                        </div>
+                        <div class="subtask-row">
+                            <div class="subtask-name">Call</div>
+                            <div class="subtask-time">20m</div>
+                        </div>
+                        <div class="subtask-row">
+                            <div class="subtask-name">Design</div>
+                            <div class="subtask-time">2h</div>
+                        </div>
+                        <div class="task-row">
+                            <div class="task-name">Development</div>
+                            <div class="task-time">20m</div>
+                        </div>
+                        <div class="task-row">
+                            <div class="task-name">Management</div>
+                            <div class="task-time">20m</div>
+                        </div>
+                    </div>
+
+                    <div class="column-divider"></div>
+
+                    <!-- WIREFRAMING column -->
+                    <div class="wireframing-column" id="wireframing-list">
+                        <div class="time-entries">
+                            <div class="time-entry">
+                                <img src="images/Bin.svg" alt="Delete" class="bin-icon">
+                                <span class="time-text">11:30 - 11:37</span>
+                                <span class="time-date">07.11.2025</span>
+                            </div>
+                            <div class="time-entry">
+                                <img src="images/Bin.svg" alt="Delete" class="bin-icon">
+                                <span class="time-text">11:30 - 11:37</span>
+                                <span class="time-date">06.11.2025</span>
+                            </div>
+                            <div class="time-entry">
+                                <img src="images/Bin.svg" alt="Delete" class="bin-icon">
+                                <span class="time-text">14:15 - 15:22</span>
+                                <span class="time-date">05.11.2025</span>
+                            </div>
+                            <div class="time-entry">
+                                <img src="images/Bin.svg" alt="Delete" class="bin-icon">
+                                <span class="time-text">09:00 - 10:15</span>
+                                <span class="time-date">04.11.2025</span>
+                            </div>
+                            <div class="time-entry">
+                                <img src="images/Bin.svg" alt="Delete" class="bin-icon">
+                                <span class="time-text">16:45 - 17:30</span>
+                                <span class="time-date">03.11.2025</span>
+                            </div>
+                            <div class="time-entry">
+                                <img src="images/Bin.svg" alt="Delete" class="bin-icon">
+                                <span class="time-text">13:20 - 14:05</span>
+                                <span class="time-date">02.11.2025</span>
+                            </div>
+                            <div class="time-entry">
+                                <img src="images/Bin.svg" alt="Delete" class="bin-icon">
+                                <span class="time-text">08:30 - 09:45</span>
+                                <span class="time-date">01.11.2025</span>
+                            </div>
+                            <div class="time-entry">
+                                <img src="images/Bin.svg" alt="Delete" class="bin-icon">
+                                <span class="time-text">15:00 - 16:20</span>
+                                <span class="time-date">31.10.2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Dialog -->
+    <div id="custom-dialog-overlay" class="dialog-overlay" style="display: none;">
+        <div class="dialog-box">
+            <p class="dialog-text" id="dialog-message"></p>
+            <div class="button-container" id="dialog-buttons"></div>
+        </div>
+    </div>
+
+    <script src="report.js"></script>
+</body>
+</html>

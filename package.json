@@ -1,0 +1,103 @@
+{
+  "name": "timmy",
+  "version": "0.9.2-beta",
+  "description": "Desktop time tracking application",
+  "main": "main.js",
+  "homepage": "https://shapeusto.com",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64",
+    "build:win": "electron-builder --win --x64",
+    "build:mac": "electron-builder --mac --x64 --arm64",
+    "build:all": "electron-builder --win --mac --x64 --arm64",
+    "package-win": "electron-packager . Timmy --overwrite --platform=win32 --arch=x64 --icon=./images/digitalreach.ico --out=dist --ignore=.backup --ignore=.claude --ignore=documentation.md --ignore=CLAUDE.md --ignore=\\*.log",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "electron",
+    "timer",
+    "time-tracking",
+    "productivity"
+  ],
+  "author": {
+    "name": "shapeusto",
+    "url": "https://shapeusto.com"
+  },
+  "license": "MIT",
+  "build": {
+    "appId": "com.shapeusto.timmy",
+    "productName": "Timmy",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!.backup",
+      "!.claude",
+      "!claude-docs",
+      "!CLAUDE.md",
+      "!*.log",
+      "!clientsecret.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "images/Logo.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ]
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.1.5",
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "dependencies": {
+    "@xenova/transformers": "^2.17.2",
+    "bottleneck": "^2.19.5",
+    "express": "^5.2.1",
+    "googleapis": "^170.1.0",
+    "uuid": "^13.0.0"
+  }
+}

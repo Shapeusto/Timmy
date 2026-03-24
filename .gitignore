@@ -1,0 +1,74 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+coverage/
+*.exe
+*.msi
+*.dmg
+*.deb
+*.rpm
+*.AppImage
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backups
+.backup/
+backups/
+
+# Development
+.claude/
+nul
+
+# Internal / local-only files
+SESSION_SUMMARY*.md
+policy.txt
+MIGRATION_STATUS.md
+delete-nul.bat
+CONTINUE_MIGRATION.md
+CALENDAR.md
+CLAUDE.md
+claude-docs/
+PLAN_NA_CSS_MODUL.md
+spravtoto.txt
+
+# Sensitive credentials (NEVER commit these)
+clientsecret.json
+google-credentials.json
+*.credentials.json
+sync-service/google-client-credentials.js
+.env
+.env.*
+
+# User data (don't commit personal time tracking data)
+projects.json
+audio-settings.json
+projects.json.backup-*
+
+# Test files
+project-timer-web.html
+pdf.html
+win.html
+
+# Documentation (all docs should be committed to repo)
+# documentation.md - KEEP IN REPO (legacy combined docs)
+# CLAUDE.md - KEEP IN REPO (legacy main docs)
+# claude-docs/ - KEEP IN REPO (new modular docs) ✅

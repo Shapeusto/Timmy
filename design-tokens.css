@@ -1,0 +1,92 @@
+/* ============================================
+   DESIGN TOKENS - Single Source of Truth
+   ============================================ */
+
+:root {
+    /* ===== SPACING SCALE (4px base unit) ===== */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-10: 40px;
+
+    /* ===== COLORS (semantic naming) ===== */
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #F5F5F5;
+    --color-bg-tertiary: #fafafa;
+
+    --color-border: #E6E6E6;
+    --color-border-light: #f0f0f0;
+
+    --color-text-primary: #333;
+    --color-text-secondary: #666;
+    --color-text-tertiary: #999;
+
+    --color-hover: #f0f0f0;
+    --color-hover-light: #f9f9f9;
+    --color-hover-green: #F5FFE4;
+    --color-selected: #F5FFE4;
+    --color-editing: #e3f2fd;
+
+    --color-accent: #DBFF00;
+    --color-accent-hover: #c0e600;
+    --color-accent-green: #3A9600;
+    --color-accent-green-dark: #27A500; /* Dark green for text/icons on accent background */
+
+    --color-alert: #FF4D00;
+    --color-alert-hover: #e64500; /* Darker orange for hover state */
+    --color-alert-bg: rgba(255, 77, 0, 0.08);
+
+    /* ===== TYPOGRAPHY ===== */
+    --font-size-micro: 9px;
+    --font-size-small: 10px;
+    --font-size-body: 12px;
+    --font-size-medium: 13px;
+    --font-size-large: 14px;
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+
+    --letter-spacing-tight: 0.3px;
+    --letter-spacing-normal: 0.5px;
+
+    /* ===== BORDER RADIUS ===== */
+    --radius-small: 4px;
+    --radius-medium: 8px;
+    --radius-large: 12px;
+
+    /* ===== TRANSITIONS ===== */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* ===== ICON SIZE ===== */
+    --icon-size: 10px;
+
+    /* ===== BUTTON DIMENSIONS ===== */
+    --button-height-small: 32px;
+    --button-height-medium: 40px;
+    --icon-button-size: 40px;
+}
+
+/* ===== ICON ANIMATIONS ===== */
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    51% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

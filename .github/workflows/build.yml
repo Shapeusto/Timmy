@@ -1,0 +1,53 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  release:
+    types: [created]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: windows-latest
+            build_cmd: npm run build:win
+            artifact: dist/*.exe
+          - os: macos-latest
+            build_cmd: npm run build:mac
+            artifact: dist/*.dmg
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+      - name: Create Google credentials
+        run: |
+          echo "module.exports = { clientId: '${{ secrets.GOOGLE_CLIENT_ID }}', clientSecret: '${{ secrets.GOOGLE_CLIENT_SECRET }}' };" > sync-service/google-client-credentials.js
+
+      - name: Build
+        run: ${{ matrix.build_cmd }}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: timmy-${{ matrix.os }}
+          path: ${{ matrix.artifact }}
+          if-no-files-found: error
