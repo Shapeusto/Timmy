@@ -2,7 +2,7 @@
 
 **Free, open-source desktop time tracking app for freelancers and agencies**
 
-Built by [Shapeusto](https://shapeusto.com) · [shapeusto.com/timmy-time-tracker/](https://shapeusto.com/timmy-time-tracking/)
+Built by [Shapeusto](https://shapeusto.com) · [shapeusto.com/timmy-time-tracking/](https://shapeusto.com/timmy-time-tracking/)
 
 ---
 
